@@ -1,6 +1,12 @@
 const container = document.querySelector(".container");
 const layoutButton = document.querySelector(".layout-change");
 
+const refresh = ()=>{
+    while(container.firstChild){
+        container.removeChild(container.firstChild);
+    }
+};
+
 const layout = (numSide)=>{
     for(let i = 0; i < numSide; i++){
         container.appendChild(document.createElement("div"));
@@ -22,9 +28,13 @@ layoutButton.addEventListener("click",()=>{
     while(num > 100){
         num = prompt("Oops, too many too handle. Try lower.");
     }
-    while(container.firstChild){
-        container.removeChild(container.firstChild);
+    if(num === null){
+        refresh();
+        layout(16);
+        return;
     }
+    
+    refresh();
     layout(num);
 });
 
