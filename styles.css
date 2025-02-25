@@ -13,3 +13,22 @@ div div {
     display: block;
     padding-top: 100%;
 }
+
+.layout-change{
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 8px;
+    color: white;
+    background-color: pink;
+    font-weight: bold;
+    border: none;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+}
+
+body{
+    background-color: black;
+}
